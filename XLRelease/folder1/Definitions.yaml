@@ -1,21 +1,18 @@
 # Exported from:        http://LAPTOP-8A5FL6F8:5516/
 # Release version:      10.0.0-20210203-123974
-# Date created:         Wed May 19 14:39:02 EDT 2021
+# Date created:         Wed May 19 16:18:20 EDT 2021
 
 ---
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  home: ENG-5551
+  home: ENG5551
 spec:
-- folderVariables:
-  - type: xlrelease.StringVariable
-    key: folder.var1
-- template: Template1
+- template: template1
   scheduledStartDate: 2021-05-19T09:00:00-04:00
   phases:
   - phase: New Phase
     tasks:
-    - name: ManTask1
+    - name: ManTask
       type: xlrelease.Task
   riskProfile: Default risk profile
