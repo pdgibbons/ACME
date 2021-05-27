@@ -1,0 +1,28 @@
+# Exported from:        http://centos1:5516/
+# Release version:      10.2.0-SNAPSHOT
+# Date created:         Wed May 26 21:30:18 EDT 2021
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: SDLM
+spec:
+- name: GitRepo
+  type: git.Repository
+  url: https://github.com/pdgibbons/SDLM
+  username: pgibbons
+  password: !value "git_Repository_GitRepo_password"
+- name: gitrepo2
+  type: git.Repository
+  url: https://github.com/pdgibbons/ACME
+  username: pgibbons
+  password: !value "git_Repository_gitrepo2_password"
+- template: template1
+  scheduledStartDate: 2021-05-26T09:00:00-04:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: ManTask
+      type: xlrelease.Task
+  riskProfile: Default risk profile
